@@ -1,0 +1,26 @@
+<div class="container">
+    <form (ngSubmit)="submitForm()">
+      <h3>ADD DETAILS OF CAR</h3>
+        
+      <div class="form-group">
+        <label for="carNo">Enter Car Id:</label>
+        <input type="text" class="form-control" placeholder="Car No" name="carNo" [(ngModel)]="car.carId">
+      </div>
+        <div class="form-group">
+          <label for="carNo">Enter Car No:</label>
+          <input type="text" class="form-control" placeholder="Car No" name="carNo" [(ngModel)]="car.carNo">
+        </div>
+        <div class="form-group">
+          <label for="carName">Enter Car Name:</label>
+          <input type="text" class="form-control" placeholder="Car Name" name="carName" [(ngModel)]="car.carName">
+        </div>
+        <div class="form-group">
+          <label for="carColour">Enter Colour Of Car:</label>
+          <input type="text" class="form-control" placeholder="Car Colour" name="carColour" [(ngModel)]="car.carColour">
+        </div>
+       <button type="submit" class="btn btn-info">Add</button>
+       <small class="float-right" style="color:blue" [routerLink]="['/driver']"> Previous</small>
+      
+      </form>
+    </div>
+    

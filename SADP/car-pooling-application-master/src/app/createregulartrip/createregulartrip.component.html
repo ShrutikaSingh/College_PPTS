@@ -1,0 +1,57 @@
+
+<div class="container">
+    <form (ngSubmit)="submitForm()">
+      <h3>Regular Trip Register</h3>
+      <div class="form-group">
+        <label for="origin">Enter Your Origin Point:</label>
+        <input type="text" class="form-control" placeholder="Origin" name="origin" [(ngModel)]="regulartrip.origin">
+      </div>
+      <div class="form-group">
+        <label for="destination">Enter Your Destination:</label>
+        <input type="text" class="form-control" placeholder="Destination" name="origin" [(ngModel)]="regulartrip.destination">
+      </div>
+      <div class="form-group">
+        <label for="depTime">Start Time:</label>
+        <input type="time" class="form-control" placeholder="Time" name="depTime" [(ngModel)]="regulartrip.depTime">
+      </div>
+      <div class="form-group">
+        <label for="endTime">End Time:</label>
+        <input type="time" class="form-control" placeholder="Time" name="endTime" [(ngModel)]="regulartrip.endTime">
+      </div>
+      <div class="form-group">
+        <label for="depDate">Departure Date:</label>
+        <input type="date" class="form-control" placeholder="Enter DOB" name="depDate" [(ngModel)]="regulartrip.depDate">
+      </div>
+      <div class="form-group">
+        <label for="endDate">End Date:</label>
+        <input type="date" class="form-control" placeholder="Enter DOB" name="endDate" [(ngModel)]="regulartrip.endDate">
+      </div>
+      <div class="form-group">
+        <label for="amount">Amount:(in Rupees)</label>
+        <input type="text" class="form-control" placeholder="Amount" name="amount" [(ngModel)]="regulartrip.amount">
+      </div>
+      
+      <div class="form-group">
+        <label for="meetPoint">Enter Your MeetPoint:</label>
+        <input type="text" class="form-control" placeholder="Meet Point" name="meetPoint1" [(ngModel)]="regulartrip.meetPoint1">
+      </div>
+      <div class="form-group">
+        <label for="driverid">Enter Driver Id:</label>
+        <input type="text" class="form-control" placeholder="driverid" name="driverId" [(ngModel)]="regulartrip.driverId">
+      </div>
+      <div class="form-group">
+        <input type="checkbox" class="form-control"  name="smoking" [(ngModel)]="regulartrip.smoking">
+        <label for="smoking"> Smoking</label>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" class="form-control"  name="pets" [(ngModel)]="regulartrip.pets">
+        <label for="pets"> Pets</label>
+      </div>
+      <div>
+      <button type="submit" class="btn btn-info">Register</button>
+       <small class="float-right" style="color:blue" [routerLink]="['/driver']"> Previous</small>
+    </div>
+      </form>
+      </div>
+       
+<router-outlet></router-outlet>

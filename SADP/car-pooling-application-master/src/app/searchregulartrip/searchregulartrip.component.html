@@ -1,0 +1,70 @@
+<div class="container">
+  <form (ngSubmit)="getRTrips()">
+    <h3>SEARCH REGULAR TRIP </h3>
+
+  
+
+   
+      <div class="form-group" >
+      <label for="origin">Enter Your Origin Point:
+      <input type="text" class="form-control" placeholder="Origin" name="origin" [(ngModel)]="regulartrip.origin" >
+    </label>
+ 
+<div margin=20px;>
+      <label for="destination">Enter Your Destination:
+      <input type="text" style="position:left;" class="form-control" placeholder="Destination" name="destination" [(ngModel)]="regulartrip.destination">
+    </label>
+  </div>
+  
+   
+    <button type="submit" class="btn btn-info"  >Search</button>
+ 
+   
+  </div>
+    </form>
+    </div>
+ 
+    <form (ngSubmit)="searchregulartrip()">
+      <div class="container" >
+          <h2   > Lists of Regular Trips</h2>
+          <p>Choose Your trip</p>           
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Origin</th>
+                <th>Destination</th>
+                <th>Departure Time</th>
+                <th>Departure Date</th>
+                <th>End Time </th>
+                <th>End Date </th>
+                <th>Amount </th>
+                <th>Driver Id</th>
+                <th>Meet Point</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let regulartrip of regulartrips ">
+                <td>{{regulartrip.origin}}</td>
+                <td>{{regulartrip.destination}}</td>
+                <td>{{regulartrip.depTime}}</td>
+                <td>{{regulartrip.depDate}}</td>
+                <td>{{regulartrip.endTime}}</td>
+                <td>{{regulartrip.endDate}}</td>
+                <td>{{regulartrip.amount}}</td>
+                <td>{{regulartrip.driverId}}</td>
+                <td>{{regulartrip.meetPoint1}}</td>
+                <td>
+                  <button type="button" class="btn btn-primary" [routerLink]="['/starttrip']">Book a Trip</button>
+                </td>
+             
+              </tr>
+            </tbody>
+          </table>
+          <small class="float-right" style="color:blue" [routerLink]="['/passenger']">Back</small>
+        </div>
+       
+      </form>
+     
+     
+<router-outlet></router-outlet>

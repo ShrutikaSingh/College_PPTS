@@ -1,0 +1,47 @@
+
+<div class="container">
+    <form (ngSubmit)="submitForm()">
+      <h3>Register</h3>
+        
+        <div class="form-group">
+          <label for="fname">Enter First name:</label>
+          <input type="text" class="form-control" placeholder="First Name" name="fname" [(ngModel)]="user.fname">
+        </div>
+        <div class="form-group">
+          <label for="lname">Enter Last name:</label>
+          <input type="text" class="form-control" placeholder="Last Name" name="lname" [(ngModel)]="user.lname">
+        </div>
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input type="email" class="form-control" placeholder="Enter email" name="email" [(ngModel)]="user.email">
+        </div>
+        <div class="form-group">
+            <label for="phoneNo">Enter Phone No:</label>
+            <input type="text" class="form-control" placeholder="Enter Phone No" name="phoneNo" [(ngModel)]="user.phoneNo">
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" class="form-control" placeholder="Enter DOB" name="dob" [(ngModel)]="user.dob">
+          </div>
+        <!-- <div class="form-group">
+            <label for="carId">Enter car id:</label>
+            <input type="text" class="form-control" placeholder="Enter carid" name="carId" [(ngModel)]="user.carId">
+          </div>
+          <div class="form-group">
+            <label for="rating">Enter Rating:</label>
+            <input type="text" class="form-control" placeholder="Enter rating" name="rating" [(ngModel)]="user.rating">
+          </div>--> 
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" placeholder="Enter password" name="password" [(ngModel)]="user.password">
+          </div>
+          <!--<div class="form-group">
+            <label for="cpwd">Confirm password:</label>
+            <input type="password" class="form-control" placeholder="confirm password">
+          </div>-->
+       <button type="submit" class="btn btn-info">Register</button>
+       <small class="float-right" style="color:blue" [routerLink]="['/']"> Login page</small>
+      
+      </form>
+    </div>
+    <router-outlet></router-outlet>

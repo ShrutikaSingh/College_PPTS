@@ -1,0 +1,39 @@
+<form (ngSubmit)="searchregulartrip()"> 
+<div class="container">
+    <h2>Product Lists</h2>
+    <p>Choose Your trip</p>            
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Origin</th>
+          <th>Destination</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{regulartrip.origin}}</td>
+          <td>{{regulartrip.destination}}</td>
+          <td>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Unnao</td>
+          <td>Luck</td>
+          <td>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </td>
+ 
+        </tr>
+        <tr>
+          <td>bangalore</td>
+          <td>kashmir</td>
+          <td>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>
